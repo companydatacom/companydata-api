@@ -181,7 +181,13 @@ curl -G "https://app.companydata.com/api/company/export" \
   --data-urlencode "worldwideHeadquarterID=<Global Headquarter ID Number>"
 ```
 
-Walkthrough with a tree view: [Corporate structure](https://companydata.com/api-docs/use-cases/corporate-structure/).
+The whole group as a JSON tree, in one command ([`examples/corporate-hierarchy.mjs`](examples/corporate-hierarchy.mjs), Node.js 18+, no dependencies):
+
+```bash
+COMPANYDATA_API_KEY=your_api_key node examples/corporate-hierarchy.mjs --search "Amazon.com" --country US > amazon.json
+```
+
+It exports every company with the group's `worldwideHeadquarterID` (scroll pagination, so nothing is skipped) and hangs each one under its local, then national, then global headquarters. Walkthrough with a tree view: [Corporate structure](https://companydata.com/api-docs/use-cases/corporate-structure/).
 
 ## Sample data
 
@@ -210,6 +216,10 @@ A few rows from those files:
 | Adobe Inc. | Los Angeles | 7372 Prepackaged Software | $19.4B | Adobe Inc., United States | 146 |
 | Oaktree Capital Management, L.P. | Los Angeles | 6282 Investment Advice | $4.9B | Brookfield Corporation, Canada | 153 |
 
+- **Build a city file yourself:** [`examples/city-dataset.mjs`](examples/city-dataset.mjs) exports the largest companies in any city, by revenue, with IDs and registration numbers kept as text:
+  ```bash
+  COMPANYDATA_API_KEY=your_api_key node examples/city-dataset.mjs --country NL --city AMSTERDAM --limit 1000 > amsterdam.csv
+  ```
 - **All companies in a city:** [companydata.com/free-business-datasets](https://companydata.com/free-business-datasets/)
 - **A sample of your own selection** (country, industry, size), within 24 hours: [companydata.com/request-data](https://companydata.com/request-data/)
 - **Look up one company for free:** [companydata.com/company-lookup](https://companydata.com/company-lookup/)
