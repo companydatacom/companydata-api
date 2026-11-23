@@ -1,10 +1,11 @@
 # Company Data API
 
-The [CompanyData Company Data API](https://companydata.com/company-data-api/) is a REST API for company data from official government registers: **377M+ registered businesses in 190+ countries**, from 1,200+ registers and sources, in one schema and refreshed monthly. Search a company by name, registration number, address, phone or email, then get the full record: address, registration and VAT number, industry codes, employees, revenue, contacts, executives and the corporate structure (parent, ultimate parent and every company in the group).
+The [CompanyData Company Data API](https://companydata.com/company-data-api/) is a company and business data API for KYB, enrichment and lead generation, built on official government registers: **377M+ registered businesses in 190+ countries**, from 1,200+ registers and sources, in one schema and refreshed monthly. Search a company by name, registration number, address, phone or email, then get the full record: address, registration and VAT number, industry codes, employees, revenue, contacts, executives and the corporate structure (parent, ultimate parent and every company in the group).
 
 One API key covers every country. On the same key: domain enrichment (website in, company out) and location lookups.
 
 - **Docs:** [companydata.com/api-docs](https://companydata.com/api-docs/)
+- **KYB / business verification:** [companydata.com/kyb-api](https://companydata.com/kyb-api/)
 - **OpenAPI spec:** [companydata.com/openapi.json](https://companydata.com/openapi.json)
 - **Get an API key:** [app.companydata.com/signup-api](https://app.companydata.com/signup-api) (7-day trial with 500 searches and 10 exports)
 - **Sample data:** [free business datasets](#sample-data) (CSV, no key needed)
