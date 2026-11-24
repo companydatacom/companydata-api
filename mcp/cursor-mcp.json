@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "companydata": {
+      "url": "https://companydata.com/mcp/",
+      "headers": { "x-api-key": "your_api_key" }
+    }
+  }
+}
